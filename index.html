@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    <script src="simpleboard.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    window.addEventListener("load", function() {
+        simpleboard(document.body);
+    });
+    </script>
+    <style>
+    .board {
+        width: 400px;
+        height: 400px;
+        border: 1px solid green;
+    }
+    .piece {
+        position: absolute;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        border: 1px solid blue;
+        background-color: lightBlue;
+    }
+    [data-can-drag="true"] {
+        border: 1px solid red;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="board">
+        <div class="screen"></div>
+        <div id="pieces">
+            <div id="p1" class="piece" data-can-drag="true"></div>
+            <div id="p2" class="piece" data-can-drag="true"></div>
+            <div id="p3" class="piece" data-can-drag="true"></div>
+        </div>
+    </div>
+</body>
+
+</html>
